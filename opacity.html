@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>带背景色的轮播图</title>
+    <link rel="stylesheet" href="opacity.css">
+<style>
+    .moudel_box{
+        margin:100px auto;
+    }
+</style>
+</head>
+</body>
+<div class="w1004 moudel_box">
+    <p style="margin-bottom:20px;" class="t_c f24">简单实用的图片轮播（轻量）</p>
+    <div id="carousel-big" class="carousel-big ">
+        <div id="carousel-center" class="carousel-center clearfix">
+            <a href="/" class="carousel-banner" style="z-index:1;opacity:1;filter:'alpha(opacity=100)';background:red url('img/1.jpg') no-repeat center center"></a>
+            <a href="/" class="carousel-banner" style="background:blue url('img/2.jpg') no-repeat center center"></a>
+            <a href="/" class="carousel-banner" style="background:green url('img/3.jpg') no-repeat center center"></a>
+        </div>
+        <a href="javascript:;" id="carousel-left-btn"></a>
+        <a href="javascript:;" id="carousel-right-btn"></a>
+    </div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="opacity.js"></script>
+<script>
+    // 传入图片的宽和高
+    $("#carousel-big a").carousel({
+        W : '100%',
+        H : 320,
+        speed : 2000,
+        //是否循环轮播如果设置该属性，那么会到最后的一个的时候停止轮播
+        isloop : false,//默认为false
+        iscarousel : true//默认为true
+        //是否开启轮播模式
+    });
+</script>
+</body>
+</html>
